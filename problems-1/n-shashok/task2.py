@@ -1,4 +1,5 @@
 import math
+import sys
 
 
 def is_prime(n):
@@ -6,3 +7,13 @@ def is_prime(n):
         if n % x == 0:
             return False
     return True
+
+
+if __name__ == "__main__":
+    while True:
+        try:
+            num = input("Input number: ")
+            print("Is it prime: ", is_prime(int(num)))
+            break
+        except ValueError:
+            print("\tCan't parse value", file=sys.stderr)
